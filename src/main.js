@@ -31,7 +31,7 @@ const clearLocalStorage = () => localStorage.clear();
 // @Executable Live functions
 
 //clear the cache
-clearLocalStorage();
+//clearLocalStorage();
 
 // Set default layout as a global component
 if (getThemeName() != null || '') {
@@ -40,5 +40,11 @@ if (getThemeName() != null || '') {
 }
 
 export default function(Vue, { router, head, isClient }) {
+	// injecting head scripts
+	head.link.push({
+		rel: 'stylesheet',
+		href: 'https://fonts.googleapis.com/css?family=Permanent Marker|Open+Sans|Playfair+Display&display=swap'
+	});
+
 	Vue.component('Layout', DefaultLayout);
 }

@@ -4,24 +4,25 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const purgecss = require("@fullhuman/postcss-purgecss");
-const tailwind = require("tailwindcss");
+const purgecss = require('@fullhuman/postcss-purgecss');
+const tailwind = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
-const postcssPlugins = [tailwind()];
+const postcssPlugins = [ tailwind(), autoprefixer() ];
 
-if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss());
 
 module.exports = {
-  siteName: "custom tailwind starter",
-  plugins: [],
-  /**
+	siteName: 'custom tailwind starter',
+	plugins: [],
+	/**
    * Post css plugins
    */
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: postcssPlugins
-      }
-    }
-  }
+	css: {
+		loaderOptions: {
+			postcss: {
+				plugins: postcssPlugins
+			}
+		}
+	}
 };
