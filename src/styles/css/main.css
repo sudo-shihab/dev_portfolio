@@ -16,3 +16,23 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@responsive {
+	.aside-main-container {
+		position: relative;
+		left: 120px;
+	}
+
+	.realign-main-container {
+		position: relative;
+		left: 0px;
+	}
+
+	.increase-width-for-main-container {
+		width: 115%;
+	}
+
+	.resize-width-for-main-container {
+		width: 100%;
+	}
+}

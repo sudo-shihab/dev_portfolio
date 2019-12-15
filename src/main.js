@@ -43,7 +43,7 @@ export default function(Vue, { router, head, isClient }) {
 	// injecting head scripts
 	head.link.push({
 		rel: 'stylesheet',
-		href: 'https://fonts.googleapis.com/css?family=Permanent Marker|Open+Sans|Playfair+Display&display=swap'
+		href: 'https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap'
 	});
 
 	Vue.component('Layout', DefaultLayout);
